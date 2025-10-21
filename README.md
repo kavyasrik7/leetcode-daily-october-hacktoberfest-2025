@@ -112,3 +112,13 @@ We are excited to see your contributions and help you grow in your open-source j
 
 Let’s solve problems together and make Hacktoberfest 2025 awesome!
 
+
+
+### 🗓️ Day 21 — 21st October
+**Problem:** [3346. Maximum Frequency of an Element After Performing Operations I](https://leetcode.com/problems/maximum-frequency-of-an-element-after-performing-operations-i/)  
+**Language:** C++  
+**Approach:**  
+Sorted the array and used binary search with frequency mapping to determine how many elements can be made equal after performing up to `k` operations. This ensures efficient frequency maximization with optimal time complexity.  
+
+**Time Complexity:** O(n log n)  
+**Space Complexity:** O(n)

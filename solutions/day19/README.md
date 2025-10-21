@@ -1,7 +1,6 @@
-#Day 19 solution in cpp and java approach :
-We use recursive DFS to explore all strings reachable from the original string by repeatedly applying the two allowed operations: 
-1. adding a to all odd indices 
-2. rotating the string by b positions. 
-A set keeps track of visited strings to avoid revisiting the same state. During recursion, we generate all possible strings and finally select the lexicographically smallest one from the visited set.
+Approach: Enumeration
+Intuition
+The problem involves two operations:
 
-Note: This can also be done using BFS
+Accumulate: Add the odd-numbered elements of ( s ) by ( a ). If the sum exceeds ( 9 ), wrap around to ( 0 ) and continue adding.
+Rotate: Rotate ( s ) to the right by ( b ) bits.
