@@ -111,4 +111,3 @@ This repository is licensed under the [MIT License](LICENSE), so feel free to us
 We are excited to see your contributions and help you grow in your open-source journey. Whether you're a beginner or an experienced developer, there's a place for you in this repository.
 
 Let’s solve problems together and make Hacktoberfest 2025 awesome!
-
