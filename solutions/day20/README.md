@@ -37,3 +37,15 @@ The approach works by iterating through each operation in the given list and upd
 Complexity Analysis
 Time Complexity: O(n) 
 Space Complexity: O(1) 
+
+Java Solution
+Problem : Final Value After Operations 
+
+Approach
+
+We initialize a variable X = 0 and iterate through the operations array.
+For each operation, if it contains "++", we increment X; otherwise, we decrement it.
+Finally, we return the value of X after all operations are performed.
+
+Time Complexity: O(n) — we traverse the array once.
+Space Complexity: O(1) — only a single integer variable is used.
