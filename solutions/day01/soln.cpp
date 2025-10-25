@@ -1,17 +1,18 @@
 class Solution {
 public:
-    int numWaterBottles(int b, int ex) {
-        int ans=0;
-         int rem=0;
-        while((b+rem)>=ex){
-           ans+=b;
-           rem+=b;
-           b=0;
-           int changables=rem/ex;
-           b=changables;
-           rem=rem%ex;
+    int numWaterBottles(int numBottles, int numExchange) {
+        int totalDrunk = 0;
+        int empty = 0;
+
+        while (numBottles > 0) {
+            totalDrunk += numBottles;
+            empty += numBottles;
+
+            // Exchange empty bottles for new full bottles
+            numBottles = empty / numExchange;
+            empty = empty % numExchange;
         }
-        ans+=b;
-        return ans;
+
+        return totalDrunk;
     }
 };

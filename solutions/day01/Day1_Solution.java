@@ -1,31 +1,23 @@
 class Solution {
-public int numWaterBottles(int numBottles, int numExchange) {
+    public int numWaterBottles(int numBottles, int numExchange) {
 
-   //drinkedBottles store the total number of bottles you can drink
-   int drinkedBottles=0;
+        int drinkedBottles = 0;   // total bottles drunk
+        int emptyBottles = 0;     // empty bottles available
 
-   //emptyBottles store the number of empty bottles you currently have
-   int emptyBottles=0;
+        while (numBottles > 0) {
+            // Drink all current full bottles
+            drinkedBottles += numBottles;
 
-    while(numBottles!=0)
-    {
-        // Drink all the current full bottles you have
-        drinkedBottles+=numBottles;
+            // Update empty bottles
+            emptyBottles += numBottles;
 
-        // All the bottles you drank now become empty bottles
-        emptyBottles+=numBottles;
+            // Exchange empty bottles for new ones
+            numBottles = emptyBottles / numExchange;
 
-        // Exchange empty bottles for new full bottles
-        numBottles=emptyBottles/numExchange;
+            // Remaining empty bottles after exchange
+            emptyBottles = emptyBottles % numExchange;
+        }
 
-        // Update the number of empty bottles left after exchange
-        emptyBottles=emptyBottles%numExchange;
-        
-    }
-
-     // Return the total number of bottles you were able to drink
-    return drinkedBottles;
-
-        
+        return drinkedBottles;
     }
 }
